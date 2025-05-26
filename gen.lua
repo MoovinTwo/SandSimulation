@@ -45,10 +45,13 @@ function gridBuilder:update()
 
     for i = 1,self.gridW do
         for j = 1,self.gridH do
+
             local curCell = self.cells[i][j]
+
             if j == self.gridH or j == 1 or i == 1 or i == self.gridW then
                 self.cells[i][j] = {"rock", "line", {255, 255, 255}}
             end
+
             if self.cells[i][j][1] == "sand" then
                 if self.cells[i][j+1] ~= nil then
                     if self.cells[i][j+1][1] == "air" then
@@ -92,7 +95,9 @@ function gridBuilder:update()
                     end
                 end
             end
+
             local sandColors = {{203, 189, 147},{250, 232, 180},{128, 119, 92},{87, 74, 36}}
+
             if i == gX then
                 if j == gY then
                     if love.mouse.isDown(1) then
@@ -100,7 +105,9 @@ function gridBuilder:update()
                     end
                 end
             end
+
         end
     end
+
 end
 
