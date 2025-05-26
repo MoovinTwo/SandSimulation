@@ -1,4 +1,4 @@
-# Sand Simulation
+# Sand Simulation <br/>
 > [!NOTE] 
 > This project was made in Lua Love 11.5 <br/>
 > This was a light side project to work on to practice my code <br/>
